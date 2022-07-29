@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Form from "./componentes/Form";
+import Main from "./componentes/Main";
+import Nav from "./componentes/Nav";
+import useArticle from "./hooks/useArticle";
+
+
 
 function App() {
+
+  const { articles, articlesCount, articlesPending, handleToggleArticle, handleDeleteArticle, handleNewArticle, totalPrecio} = useArticle();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen bg-[#a5b4fc]">
+      <Nav/>
+
+      <div className="flex flex-col md:flex-row">
+        
+        <Main articles={articles} onDeleteArticle={handleDeleteArticle} onToggleArticle={handleToggleArticle} totalPrecio={totalPrecio} />
+
+        <Form onNewArticle={handleNewArticle}/>
+
+      </div>
+
     </div>
   );
 }
