@@ -8,7 +8,7 @@ const Main = ({articles, onDeleteArticle, onToggleArticle, totalPrecio}) => {
     <div className="flex flex-col md:w-2/3 m-10 rounded-md bg-white">
       <h1 className='my-4 text-xl text-center font-semibold'>Inventario de articulos</h1>
       <hr/>
-      <div className='flex flex-row justify-around px-10 my-2'>
+      <div className='flex flex-row justify-around px-5 my-2'>
             <div className='basis-1/4 font-semibold'>
                 <span>Compra:</span>
             </div>

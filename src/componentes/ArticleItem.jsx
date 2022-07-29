@@ -6,7 +6,7 @@ import { AiOutlineDelete } from 'react-icons/ai';
 
 const ArticleItem = ({ article, onDeleteArticle, onToggleArticle }) => {
   return (
-    <div className='px-10 my-2'>
+    <div className='px-5 my-2'>
 
        <div className='flex flex-row justify-around items-center'>
             <div className='basis-1/4'>

@@ -10,7 +10,7 @@ function App() {
   const { articles, articlesCount, articlesPending, handleToggleArticle, handleDeleteArticle, handleNewArticle, totalPrecio} = useArticle();
 
   return (
-    <div className="h-screen bg-[#a5b4fc]">
+    <div className="h-full md:h-screen bg-[#a5b4fc]">
       <Nav/>
 
       <div className="flex flex-col md:flex-row">
