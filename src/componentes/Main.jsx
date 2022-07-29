@@ -1,6 +1,7 @@
 import React from 'react';
 import ArticleItem from './ArticleItem';
-
+import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { BiTime } from 'react-icons/bi';
 
 const Main = ({articles, onDeleteArticle, onToggleArticle, totalPrecio}) => {
 
@@ -9,13 +10,13 @@ const Main = ({articles, onDeleteArticle, onToggleArticle, totalPrecio}) => {
       <h1 className='my-4 text-xl text-center font-semibold'>Inventario de articulos</h1>
       <hr/>
       <div className='flex flex-row justify-around px-5 my-2'>
-            <div className='basis-1/4 font-semibold'>
-                <span>Compra:</span>
+            <div className='basis-1/4 font-semibold flex justify-center'>
+                <span>Estado:</span>
             </div>
-            <div className='basis-1/2 font-semibold'>
+            <div className='basis-1/2 font-semibold flex justify-center'>
                 <span>Nombre:</span>
             </div>
-            <div className='basis-1/2 font-semibold'>
+            <div className='basis-1/2 font-semibold flex justify-center'>
                 <span>Precio S/:</span>
             </div>
             <div className='basis-1/4 text-center font-semibold'>
@@ -36,6 +37,9 @@ const Main = ({articles, onDeleteArticle, onToggleArticle, totalPrecio}) => {
         }
         {totalPrecio > 0 &&
           <div className='flex flex-row px-10 my-2 font-semibold'>Costo estimado: {totalPrecio} S/</div>
+        }
+        {articles.length > 0 &&
+          <div className='flex flex-row px-10 my-2 items-center'><small>*Cambia el estado pulsando sobre el icono del articulo</small></div>
         }
     </div>
   )

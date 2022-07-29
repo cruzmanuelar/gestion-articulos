@@ -5,7 +5,7 @@ const Form = ({onNewArticle}) => {
 
   const { nombre, precio, onChangeInput, onResetForm } = useForm({
     nombre: '',
-    precio:0
+    precio:''
   });
 
   const onFormSubmit = (e) => {
@@ -30,7 +30,7 @@ const Form = ({onNewArticle}) => {
     <div className="md:w-1/3 flex flex-col m-10 bg-white rounded-md">
 
 
-        <h4 className='my-4 text-xl text-center font-semibold underline'>Agregar articulo</h4>
+        <h4 className='my-2 md:my-4 text-xl text-center font-semibold underline'>Agregar articulo</h4>
         <form onSubmit={onFormSubmit} className='flex flex-col justify-center p-3'>
           <label className='my-2 font-semibold'>Nombre:</label>
           <input

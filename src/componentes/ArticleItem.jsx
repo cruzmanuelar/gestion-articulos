@@ -9,19 +9,19 @@ const ArticleItem = ({ article, onDeleteArticle, onToggleArticle }) => {
     <div className='px-5 my-2'>
 
        <div className='flex flex-row justify-around items-center'>
-            <div className='basis-1/4'>
+            <div className='basis-1/4 flex justify-center'>
 
-                <span onClick={() => onToggleArticle(article.id)}>
+                <span className='' onClick={() => onToggleArticle(article.id)}>
                  {article.existe ? <BsFillCheckCircleFill className='hover:scale-125' color='green'/> : <BiTime className='hover:scale-125' size={20}/>}
                  
                  </span>
             </div>
-            <div className='basis-1/2'>
+            <div className='basis-1/2 flex justify-center'>
                 <span
                     className=''
                     >{article.nombre}</span>
             </div>
-            <div className='basis-1/2'>
+            <div className='basis-1/2 flex justify-center'>
                 <span>{article.precio}</span>
             </div>
             <div className='basis-1/4 text-center'>
