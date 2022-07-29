@@ -11,7 +11,7 @@ const Form = ({onNewArticle}) => {
   const onFormSubmit = (e) => {
     e.preventDefault();
 
-    if(nombre.length <= 1 || precio < 0) return;
+    if(nombre.length <= 1 || precio <= 0) return;
 
     const newArticle = {
 
@@ -50,8 +50,9 @@ const Form = ({onNewArticle}) => {
             required
             type='number'
             autoComplete='off'
+            min='1'
           />
-          <button className='bg-[#22c55e] rounded-md py-2 my-2 font-semibold' type='submit'>Agregar</button>
+          <button className='bg-[#16a34a] text-white rounded-md py-2 my-2 font-semibold hover:bg-green-800 duration-150' type='submit'>Agregar</button>
         </form>
 
 
